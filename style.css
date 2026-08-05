@@ -1,0 +1,611 @@
+/* RESET */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body{
+
+  font-family: Arial, sans-serif;
+
+  min-height: 100vh;
+
+  /* IMAGEM NO FUNDO */
+  background-image: url("https://www.casafirjan.com.br/sites/default/files/styles/1087x508/public/2024-08/Educa%C3%A7%C3%A3o%20Antirracista%20no%20Brasil_0.png");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+}
+
+/* TOPO */
+.topo{
+
+  background: rgba(70,50,40,0.88);
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+
+  padding: 25px 50px;
+}
+
+/* LOGO */
+.logo-area{
+
+  display: inline-block;
+
+  vertical-align: middle;
+}
+
+.logo-area img{
+
+  width: 140px;
+}
+
+/* TÍTULO */
+.titulo{
+
+  display: inline-block;
+
+  vertical-align: middle;
+
+  margin-left: 30px;
+}
+
+.titulo h1{
+
+  color: #f3e89a;
+
+  font-size: 34px;
+
+  font-weight: normal;
+
+  line-height: 1.3;
+}
+
+/* MENU */
+.menu{
+
+  margin-top: 35px;
+
+  display: flex;
+
+  gap: 55px;
+}
+
+/* LINKS */
+.menu a{
+
+  color: yellow;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  transition: 0.3s;
+}
+
+/* HOVER */
+.menu a:hover{
+
+  color: white;
+}
+
+/* DROPDOWN */
+.dropdown{
+
+  position: relative;
+}
+
+/* SUBMENU */
+.submenu{
+
+  position: absolute;
+
+  top: 100%;
+  left: 0;
+
+  min-width: 220px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background-color: #c9bf2d;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  transform: translateY(-20px);
+
+  pointer-events: none;
+
+  transition:
+  opacity 0.4s ease,
+  transform 0.4s ease;
+
+  z-index: 1000;
+}
+
+/* LINKS SUBMENU */
+.submenu a{
+
+  color: #4b382e;
+
+  padding: 18px;
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+
+  opacity: 0;
+
+  transform: translateY(-10px);
+
+  transition:
+  0.3s,
+  transform 0.4s ease,
+  opacity 0.4s ease;
+}
+
+/* MOSTRAR SUBMENU */
+.dropdown:hover .submenu{
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+  pointer-events: auto;
+}
+
+/* ANIMAÇÃO */
+.dropdown:hover .submenu a{
+
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* DELAY */
+.dropdown:hover .submenu a:nth-child(1){
+
+  transition-delay: 0.05s;
+}
+
+.dropdown:hover .submenu a:nth-child(2){
+
+  transition-delay: 0.12s;
+}
+
+.dropdown:hover .submenu a:nth-child(3){
+
+  transition-delay: 0.19s;
+}
+
+/* HOVER SUBMENU */
+.submenu a:hover{
+
+  background-color: #b7ad22;
+
+  color: white;
+}
+
+/* CONTEÚDO */
+.conteudo{
+
+    width: 70%;
+
+    margin: 40px auto;
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+
+    position: relative;
+
+    z-index: 1;
+}
+
+/* TÍTULO */
+.conteudo h2{
+
+  color: #ffffff;
+
+  font-size: 58px;
+
+  margin-bottom: 25px;
+
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* SUBTÍTULO */
+.conteudo h3{
+
+  color: #ffffff;
+
+  font-size: 36px;
+
+  margin-top: 25px;
+
+  margin-bottom: 15px;
+}
+
+/* TEXTO */
+.conteudo p{
+
+  color: #f1f1f1;
+
+  font-size: 22px;
+
+  line-height: 1.6;
+
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* LINHA */
+.conteudo hr{
+
+  margin: 30px 0;
+
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* AUTORES */
+.autor-box{
+
+  background: rgba(255,255,255,0.10);
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+
+  border-left: 6px solid #ffffff;
+
+  padding: 25px;
+
+  margin-top: 25px;
+
+  border-radius: 15px;
+
+  transition: 0.3s;
+}
+
+/* HOVER AUTORES */
+.autor-box:hover{
+
+  transform: translateX(8px);
+
+  background: rgba(255,255,255,0.20);
+}
+/* TOPO */
+.topo{
+
+    background: rgba(70,50,40,0.88);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    padding: 25px 50px;
+
+    position: relative;
+
+    z-index: 1000;
+}
+
+/* MENU */
+.menu{
+
+    margin-top: 35px;
+
+    display: flex;
+
+    gap: 55px;
+
+    position: relative;
+
+    z-index: 1001;
+}
+
+/* LINKS */
+.menu a{
+
+    color: yellow;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover{
+
+    color: white;
+}
+
+/* DROPDOWN */
+.dropdown{
+
+    position: relative;
+
+    z-index: 1002;
+}
+
+/* SUBMENU */
+.submenu{
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    width: 260px;
+
+    background-color: #c9bf2d;
+
+    display: flex;
+
+    flex-direction: column;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-15px);
+
+    transition: all 0.4s ease;
+
+    z-index: 9999;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* MOSTRAR SUBMENU */
+.dropdown:hover .submenu{
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+/* ITENS DO SUBMENU */
+.submenu a{
+
+    color: #4b382e;
+
+    padding: 18px 25px;
+
+    font-size: 18px;
+
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+
+    opacity: 0;
+
+    transform: translateY(-10px);
+
+    transition: all 0.3s ease;
+}
+
+/* ANIMAÇÃO DOS ITENS */
+.dropdown:hover .submenu a{
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.dropdown:hover .submenu a:nth-child(1){
+
+    transition-delay: 0.05s;
+}
+
+.dropdown:hover .submenu a:nth-child(2){
+
+    transition-delay: 0.12s;
+}
+
+.dropdown:hover .submenu a:nth-child(3){
+
+    transition-delay: 0.19s;
+}
+
+/* HOVER */
+.submenu a:hover{
+
+    background-color: #b7ad22;
+
+    color: white;
+}
+/* VÍDEO */
+
+.video-container{
+
+    width: 100%;
+
+    margin-top: 30px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,0.10);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.video-container iframe{
+
+    width: 100%;
+
+    height: 600px;
+
+    border: none;
+}
+/* =================================== */
+/* CARROSSEL DE FUNDO */
+/* =================================== */
+
+.carrossel{
+
+    min-height: 100vh;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    animation: fundoRotativo 40s infinite;
+}
+
+/* 4 IMAGENS - 10 SEGUNDOS CADA */
+
+@keyframes fundoRotativo{
+
+    /* IMAGEM 1 */
+    0%,24.99%{
+
+        background-image:url("https://images.pexels.com/photos/4656554/pexels-photo-4656554.jpeg");
+    }
+
+    /* IMAGEM 2 */
+    25%,49.99%{
+
+        background-image:url("https://images.pexels.com/photos/9513973/pexels-photo-9513973.jpeg");
+    }
+
+    /* IMAGEM 3 */
+    50%,74.99%{
+
+        background-image:url("https://images.pexels.com/photos/28192518/pexels-photo-28192518.jpeg");
+    }
+
+    /* IMAGEM 4 */
+    75%,100%{
+
+        background-image:url("https://images.pexels.com/photos/22711178/pexels-photo-22711178.jpeg");
+    }
+}
+
+/* ===================================== */
+/* FORMULÁRIO DE CONTATO */
+/* ===================================== */
+
+.formulario {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.formulario label {
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 18px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.formulario textarea {
+
+    resize: vertical;
+
+    min-height: 180px;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.formulario button {
+
+    width: 220px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #d4c129;
+
+    color: #4b382e;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+
+    background: #f0dd3a;
+
+    transform: scale(1.05);
+}
