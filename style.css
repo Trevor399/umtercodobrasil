@@ -1,483 +1,76 @@
-/* RESET */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+```css
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* BODY */
-body{
 
-  font-family: Arial, sans-serif;
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
 
-  min-height: 100vh;
+:root {
 
-  /* IMAGEM NO FUNDO */
-  background-image: url("https://www.casafirjan.com.br/sites/default/files/styles/1087x508/public/2024-08/Educa%C3%A7%C3%A3o%20Antirracista%20no%20Brasil_0.png");
+    --verde: #173f32;
+    --verde-escuro: #102d24;
+    --verde-claro: #285b49;
 
-  background-size: cover;
+    --bege: #f1e6c8;
+    --bege-claro: #faf6ea;
 
-  background-position: center;
+    --amarelo: #d4c129;
+    --marrom: #4b382e;
 
-  background-repeat: no-repeat;
+    --branco: #ffffff;
 
-  background-attachment: fixed;
+    --texto: #f7f3e8;
+
+    --sombra: rgba(0, 0, 0, 0.25);
+
 }
 
-/* TOPO */
-.topo{
 
-  background: rgba(70,50,40,0.88);
+/* =========================================================
+   BODY
+========================================================= */
 
-  backdrop-filter: blur(10px);
+body {
 
-  -webkit-backdrop-filter: blur(10px);
-
-  padding: 25px 50px;
-}
-
-/* LOGO */
-.logo-area{
-
-  display: inline-block;
-
-  vertical-align: middle;
-}
-
-.logo-area img{
-
-  width: 140px;
-}
-
-/* TÍTULO */
-.titulo{
-
-  display: inline-block;
-
-  vertical-align: middle;
-
-  margin-left: 30px;
-}
-
-.titulo h1{
-
-  color: #f3e89a;
-
-  font-size: 34px;
-
-  font-weight: normal;
-
-  line-height: 1.3;
-}
-
-/* MENU */
-.menu{
-
-  margin-top: 35px;
-
-  display: flex;
-
-  gap: 55px;
-}
-
-/* LINKS */
-.menu a{
-
-  color: yellow;
-
-  text-decoration: none;
-
-  font-size: 16px;
-
-  transition: 0.3s;
-}
-
-/* HOVER */
-.menu a:hover{
-
-  color: white;
-}
-
-/* DROPDOWN */
-.dropdown{
-
-  position: relative;
-}
-
-/* SUBMENU */
-.submenu{
-
-  position: absolute;
-
-  top: 100%;
-  left: 0;
-
-  min-width: 220px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  background-color: #c9bf2d;
-
-  overflow: hidden;
-
-  opacity: 0;
-
-  transform: translateY(-20px);
-
-  pointer-events: none;
-
-  transition:
-  opacity 0.4s ease,
-  transform 0.4s ease;
-
-  z-index: 1000;
-}
-
-/* LINKS SUBMENU */
-.submenu a{
-
-  color: #4b382e;
-
-  padding: 18px;
-
-  text-decoration: none;
-
-  font-size: 18px;
-
-  border-bottom: 1px solid rgba(0,0,0,0.3);
-
-  opacity: 0;
-
-  transform: translateY(-10px);
-
-  transition:
-  0.3s,
-  transform 0.4s ease,
-  opacity 0.4s ease;
-}
-
-/* MOSTRAR SUBMENU */
-.dropdown:hover .submenu{
-
-  opacity: 1;
-
-  transform: translateY(0);
-
-  pointer-events: auto;
-}
-
-/* ANIMAÇÃO */
-.dropdown:hover .submenu a{
-
-  opacity: 1;
-
-  transform: translateY(0);
-}
-
-/* DELAY */
-.dropdown:hover .submenu a:nth-child(1){
-
-  transition-delay: 0.05s;
-}
-
-.dropdown:hover .submenu a:nth-child(2){
-
-  transition-delay: 0.12s;
-}
-
-.dropdown:hover .submenu a:nth-child(3){
-
-  transition-delay: 0.19s;
-}
-
-/* HOVER SUBMENU */
-.submenu a:hover{
-
-  background-color: #b7ad22;
-
-  color: white;
-}
-
-/* CONTEÚDO */
-.conteudo{
-
-    width: 70%;
-
-    margin: 40px auto;
-
-    padding: 50px;
-
-    border-radius: 25px;
-
-    background: rgba(255,255,255,0.15);
-
-    backdrop-filter: blur(20px);
-
-    -webkit-backdrop-filter: blur(20px);
-
-    border: 1px solid rgba(255,255,255,0.2);
-
-    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
-
-    position: relative;
-
-    z-index: 1;
-}
-
-/* TÍTULO */
-.conteudo h2{
-
-  color: #ffffff;
-
-  font-size: 58px;
-
-  margin-bottom: 25px;
-
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-/* SUBTÍTULO */
-.conteudo h3{
-
-  color: #ffffff;
-
-  font-size: 36px;
-
-  margin-top: 25px;
-
-  margin-bottom: 15px;
-}
-
-/* TEXTO */
-.conteudo p{
-
-  color: #f1f1f1;
-
-  font-size: 22px;
-
-  line-height: 1.6;
-
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-
-/* LINHA */
-.conteudo hr{
-
-  margin: 30px 0;
-
-  border: 1px solid rgba(255,255,255,0.25);
-}
-
-/* AUTORES */
-.autor-box{
-
-  background: rgba(255,255,255,0.10);
-
-  backdrop-filter: blur(10px);
-
-  -webkit-backdrop-filter: blur(10px);
-
-  border-left: 6px solid #ffffff;
-
-  padding: 25px;
-
-  margin-top: 25px;
-
-  border-radius: 15px;
-
-  transition: 0.3s;
-}
-
-/* HOVER AUTORES */
-.autor-box:hover{
-
-  transform: translateX(8px);
-
-  background: rgba(255,255,255,0.20);
-}
-/* TOPO */
-.topo{
-
-    background: rgba(70,50,40,0.88);
-
-    backdrop-filter: blur(10px);
-
-    -webkit-backdrop-filter: blur(10px);
-
-    padding: 25px 50px;
-
-    position: relative;
-
-    z-index: 1000;
-}
-
-/* MENU */
-.menu{
-
-    margin-top: 35px;
-
-    display: flex;
-
-    gap: 55px;
-
-    position: relative;
-
-    z-index: 1001;
-}
-
-/* LINKS */
-.menu a{
-
-    color: yellow;
-
-    text-decoration: none;
-
-    font-size: 16px;
-
-    transition: 0.3s;
-}
-
-.menu a:hover{
-
-    color: white;
-}
-
-/* DROPDOWN */
-.dropdown{
-
-    position: relative;
-
-    z-index: 1002;
-}
-
-/* SUBMENU */
-.submenu{
-
-    position: absolute;
-
-    top: 100%;
-
-    left: 0;
-
-    width: 260px;
-
-    background-color: #c9bf2d;
-
-    display: flex;
-
-    flex-direction: column;
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    transform: translateY(-15px);
-
-    transition: all 0.4s ease;
-
-    z-index: 9999;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-/* MOSTRAR SUBMENU */
-.dropdown:hover .submenu{
-
-    opacity: 1;
-
-    visibility: visible;
-
-    transform: translateY(0);
-}
-
-/* ITENS DO SUBMENU */
-.submenu a{
-
-    color: #4b382e;
-
-    padding: 18px 25px;
-
-    font-size: 18px;
-
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-
-    opacity: 0;
-
-    transform: translateY(-10px);
-
-    transition: all 0.3s ease;
-}
-
-/* ANIMAÇÃO DOS ITENS */
-.dropdown:hover .submenu a{
-
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-.dropdown:hover .submenu a:nth-child(1){
-
-    transition-delay: 0.05s;
-}
-
-.dropdown:hover .submenu a:nth-child(2){
-
-    transition-delay: 0.12s;
-}
-
-.dropdown:hover .submenu a:nth-child(3){
-
-    transition-delay: 0.19s;
-}
-
-/* HOVER */
-.submenu a:hover{
-
-    background-color: #b7ad22;
-
-    color: white;
-}
-/* VÍDEO */
-
-.video-container{
-
-    width: 100%;
-
-    margin-top: 30px;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    background: rgba(255,255,255,0.10);
-
-    backdrop-filter: blur(10px);
-
-    -webkit-backdrop-filter: blur(10px);
-
-    border: 1px solid rgba(255,255,255,0.15);
-
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-}
-
-.video-container iframe{
-
-    width: 100%;
-
-    height: 600px;
-
-    border: none;
-}
-/* =================================== */
-/* CARROSSEL DE FUNDO */
-/* =================================== */
-
-.carrossel{
+    font-family: Arial, Helvetica, sans-serif;
 
     min-height: 100vh;
+
+    color: var(--texto);
+
+    background-image:
+        linear-gradient(
+            rgba(16, 45, 36, 0.45),
+            rgba(16, 45, 36, 0.45)
+        ),
+        url("https://www.casafirjan.com.br/sites/default/files/styles/1087x508/public/2024-08/Educa%C3%A7%C3%A3o%20Antirracista%20no%20Brasil_0.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+}
+
+
+/* =========================================================
+   CARROSSEL
+   4 IMAGENS / 10 SEGUNDOS CADA
+========================================================= */
+
+body.carrossel {
 
     background-size: cover;
 
@@ -488,40 +81,568 @@ body{
     background-attachment: fixed;
 
     animation: fundoRotativo 40s infinite;
+
 }
 
-/* 4 IMAGENS - 10 SEGUNDOS CADA */
 
-@keyframes fundoRotativo{
+/* =========================================================
+   ANIMAÇÃO DO CARROSSEL
+========================================================= */
 
-    /* IMAGEM 1 */
-    0%,24.99%{
+@keyframes fundoRotativo {
 
-        background-image:url("https://images.pexels.com/photos/4656554/pexels-photo-4656554.jpeg");
+    0%,
+    24.99% {
+
+        background-image:
+            linear-gradient(
+                rgba(16, 45, 36, 0.48),
+                rgba(16, 45, 36, 0.48)
+            ),
+            url("https://images.pexels.com/photos/4656554/pexels-photo-4656554.jpeg");
+
     }
 
-    /* IMAGEM 2 */
-    25%,49.99%{
+    25%,
+    49.99% {
 
-        background-image:url("https://images.pexels.com/photos/9513973/pexels-photo-9513973.jpeg");
+        background-image:
+            linear-gradient(
+                rgba(16, 45, 36, 0.48),
+                rgba(16, 45, 36, 0.48)
+            ),
+            url("https://images.pexels.com/photos/9513973/pexels-photo-9513973.jpeg");
+
     }
 
-    /* IMAGEM 3 */
-    50%,74.99%{
+    50%,
+    74.99% {
 
-        background-image:url("https://images.pexels.com/photos/28192518/pexels-photo-28192518.jpeg");
+        background-image:
+            linear-gradient(
+                rgba(16, 45, 36, 0.48),
+                rgba(16, 45, 36, 0.48)
+            ),
+            url("https://images.pexels.com/photos/28192518/pexels-photo-28192518.jpeg");
+
     }
 
-    /* IMAGEM 4 */
-    75%,100%{
+    75%,
+    100% {
 
-        background-image:url("https://images.pexels.com/photos/22711178/pexels-photo-22711178.jpeg");
+        background-image:
+            linear-gradient(
+                rgba(16, 45, 36, 0.48),
+                rgba(16, 45, 36, 0.48)
+            ),
+            url("https://images.pexels.com/photos/22711178/pexels-photo-22711178.jpeg");
+
     }
+
 }
 
-/* ===================================== */
-/* FORMULÁRIO DE CONTATO */
-/* ===================================== */
+
+/* =========================================================
+   TOPO
+========================================================= */
+
+.topo {
+
+    width: 100%;
+
+    min-height: 105px;
+
+    padding: 20px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    position: relative;
+
+    z-index: 1000;
+
+    background: rgba(23, 63, 50, 0.96);
+
+    border-bottom: 1px solid rgba(241, 230, 200, 0.2);
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.18);
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+}
+
+
+.logo-area img {
+
+    width: 105px;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.titulo {
+
+    flex: 1;
+
+}
+
+
+.titulo h1 {
+
+    color: var(--bege);
+
+    font-size: 27px;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 28px;
+
+    position: relative;
+
+    z-index: 1001;
+
+}
+
+
+/* =========================================================
+   LINKS DO MENU
+========================================================= */
+
+.menu > a,
+.dropdown > a {
+
+    color: var(--bege);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.7px;
+
+    padding: 12px 0;
+
+    position: relative;
+
+    transition: 0.3s ease;
+
+}
+
+
+/* LINHA ABAIXO DO LINK */
+
+.menu > a::after,
+.dropdown > a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 4px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--amarelo);
+
+    transition: width 0.3s ease;
+
+}
+
+
+.menu > a:hover,
+.dropdown > a:hover {
+
+    color: var(--amarelo);
+
+}
+
+
+.menu > a:hover::after,
+.dropdown > a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.dropdown {
+
+    position: relative;
+
+    z-index: 1002;
+
+}
+
+
+/* =========================================================
+   SUBMENU
+========================================================= */
+
+.submenu {
+
+    position: absolute;
+
+    top: calc(100% + 10px);
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        translateY(-15px);
+
+    width: 245px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: rgba(241, 230, 200, 0.98);
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        visibility 0.35s ease;
+
+    z-index: 9999;
+
+}
+
+
+/* =========================================================
+   ABRIR SUBMENU
+========================================================= */
+
+.dropdown:hover .submenu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   LINKS DO SUBMENU
+========================================================= */
+
+.submenu a {
+
+    color: var(--verde-escuro);
+
+    text-decoration: none;
+
+    padding: 15px 20px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    border-bottom:
+        1px solid rgba(23, 63, 50, 0.12);
+
+    opacity: 0;
+
+    transform: translateY(-10px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.dropdown:hover .submenu a {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.dropdown:hover .submenu a:nth-child(1) {
+
+    transition-delay: 0.05s;
+
+}
+
+
+.dropdown:hover .submenu a:nth-child(2) {
+
+    transition-delay: 0.12s;
+
+}
+
+
+.dropdown:hover .submenu a:nth-child(3) {
+
+    transition-delay: 0.19s;
+
+}
+
+
+.submenu a:hover {
+
+    background: var(--verde);
+
+    color: var(--bege);
+
+}
+
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+========================================================= */
+
+.conteudo {
+
+    width: min(1100px, 88%);
+
+    margin: 65px auto;
+
+    padding: 60px;
+
+    background:
+        rgba(16, 45, 36, 0.78);
+
+    border-left:
+        5px solid var(--amarelo);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+}
+
+
+/* =========================================================
+   TÍTULO PRINCIPAL
+========================================================= */
+
+.conteudo h2 {
+
+    color: var(--bege);
+
+    font-size: 48px;
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+/* =========================================================
+   SUBTÍTULOS
+========================================================= */
+
+.conteudo h3 {
+
+    color: var(--bege);
+
+    font-size: 28px;
+
+    font-weight: 500;
+
+    margin-top: 25px;
+
+    margin-bottom: 18px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+/* =========================================================
+   PARÁGRAFOS
+========================================================= */
+
+.conteudo p {
+
+    color: rgba(255, 255, 255, 0.93);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================================================
+   LINHAS
+========================================================= */
+
+.conteudo hr {
+
+    border: none;
+
+    height: 1px;
+
+    background:
+        rgba(241, 230, 200, 0.25);
+
+    margin: 35px 0;
+
+}
+
+
+/* =========================================================
+   AUTORES
+========================================================= */
+
+.autor-box {
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid rgba(241, 230, 200, 0.15);
+
+    border-left:
+        4px solid var(--amarelo);
+
+    padding: 22px;
+
+    margin-top: 20px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.autor-box:hover {
+
+    transform: translateX(8px);
+
+    background:
+        rgba(255, 255, 255, 0.14);
+
+}
+
+
+/* =========================================================
+   VÍDEO
+========================================================= */
+
+.video-container {
+
+    width: 100%;
+
+    margin-top: 30px;
+
+    background:
+        rgba(0, 0, 0, 0.25);
+
+    border:
+        1px solid rgba(241, 230, 200, 0.15);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.video-container iframe {
+
+    display: block;
+
+    width: 100%;
+
+    height: 560px;
+
+    border: none;
+
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
 
 .formulario {
 
@@ -532,80 +653,367 @@ body{
     gap: 15px;
 
     margin-top: 30px;
+
 }
+
 
 .formulario label {
 
-    color: white;
+    color: var(--bege);
 
-    font-size: 22px;
+    font-size: 17px;
 
     font-weight: bold;
+
+    margin-top: 8px;
+
 }
+
 
 .formulario input,
 .formulario textarea {
 
     width: 100%;
 
-    padding: 15px;
+    padding: 15px 17px;
 
-    border: none;
+    border:
+        1px solid rgba(241, 230, 200, 0.25);
 
-    border-radius: 12px;
+    border-radius: 3px;
 
     outline: none;
 
-    font-size: 18px;
-
-    background: rgba(255, 255, 255, 0.15);
+    background:
+        rgba(255, 255, 255, 0.08);
 
     color: white;
 
-    backdrop-filter: blur(10px);
+    font-family: Arial, Helvetica, sans-serif;
 
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 16px;
+
+    transition:
+        border 0.3s ease,
+        background 0.3s ease;
+
 }
+
+
+.formulario input:focus,
+.formulario textarea:focus {
+
+    border-color: var(--amarelo);
+
+    background:
+        rgba(255, 255, 255, 0.13);
+
+}
+
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+
+    color:
+        rgba(255, 255, 255, 0.6);
+
+}
+
 
 .formulario textarea {
 
     resize: vertical;
 
-    min-height: 180px;
+    min-height: 160px;
+
 }
 
-.formulario input::placeholder,
-.formulario textarea::placeholder {
-
-    color: rgba(255, 255, 255, 0.7);
-}
 
 .formulario button {
 
-    width: 220px;
+    width: fit-content;
 
-    padding: 15px;
+    padding: 14px 28px;
+
+    margin-top: 10px;
 
     border: none;
 
-    border-radius: 12px;
+    border-radius: 3px;
 
-    background: #d4c129;
+    background: var(--amarelo);
 
-    color: #4b382e;
+    color: var(--verde-escuro);
 
-    font-size: 20px;
+    font-size: 15px;
 
     font-weight: bold;
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
 }
+
 
 .formulario button:hover {
 
-    background: #f0dd3a;
+    background: var(--bege);
 
-    transform: scale(1.05);
+    transform: translateY(-3px);
+
 }
+
+
+/* =========================================================
+   TABELAS
+========================================================= */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+}
+
+
+th {
+
+    background: var(--verde-escuro);
+
+    color: var(--bege);
+
+    padding: 15px;
+
+    text-align: left;
+
+}
+
+
+td {
+
+    color: white;
+
+    padding: 15px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.12);
+
+}
+
+
+tr:hover td {
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+}
+
+
+/* =========================================================
+   LISTAS
+========================================================= */
+
+.conteudo ul {
+
+    margin: 20px 0;
+
+    padding-left: 25px;
+
+}
+
+
+.conteudo li {
+
+    color: white;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   LINKS DENTRO DO CONTEÚDO
+========================================================= */
+
+.conteudo a {
+
+    color: var(--amarelo);
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+
+}
+
+
+.conteudo a:hover {
+
+    color: var(--bege);
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .topo {
+
+        flex-wrap: wrap;
+
+        padding: 20px 5%;
+
+    }
+
+    .titulo {
+
+        flex: 1;
+
+        min-width: 250px;
+
+    }
+
+    .menu {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .topo {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 20px;
+
+    }
+
+    .logo-area img {
+
+        width: 85px;
+
+    }
+
+    .titulo h1 {
+
+        font-size: 21px;
+
+    }
+
+    .menu {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+    }
+
+    .menu > a,
+    .dropdown > a {
+
+        font-size: 13px;
+
+    }
+
+    .submenu {
+
+        position: static;
+
+        transform: none;
+
+        width: 100%;
+
+        margin-top: 8px;
+
+    }
+
+    .dropdown:hover .submenu {
+
+        transform: none;
+
+    }
+
+    .conteudo {
+
+        width: 92%;
+
+        margin: 35px auto;
+
+        padding: 30px 25px;
+
+    }
+
+    .conteudo h2 {
+
+        font-size: 36px;
+
+    }
+
+    .conteudo h3 {
+
+        font-size: 25px;
+
+    }
+
+    .conteudo p {
+
+        font-size: 16px;
+
+        line-height: 1.7;
+
+    }
+
+    .video-container iframe {
+
+        height: 300px;
+
+    }
+
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+
+        animation: none !important;
+
+    }
+
+}
+```
